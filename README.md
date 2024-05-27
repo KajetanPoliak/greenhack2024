@@ -12,4 +12,4 @@
 ## What could be score?
 - differences between import and export? Shall we condition it on the prices?
 - maybe manually define rules and score evaluation? e. g. if prices are low I maybe wanna fill my battery.
-- As Jan said: "this should not be our job."
+- As Jan said: "this is *not* our job."
