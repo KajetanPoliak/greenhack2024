@@ -4,10 +4,10 @@ file_path = 'MycroftMind_challenge_dataset.xlsx'
 data_file = pd.ExcelFile(file_path)
 sheet_names = list(data_file.sheet_names)[1:]
 
-#print(f'Sheet names: {sheet_names}')
-#for name in sheet_names:
-#    sheet_data = pd.read_excel(file_path, name)
-#    print(f'{name}\'s headers: {sheet_data.columns.to_list()}')
+print(f'Sheet names: {sheet_names}')
+for name in sheet_names:
+    sheet_data = pd.read_excel(file_path, name)
+    print(f'{name}\'s headers: {sheet_data.columns.to_list()}')
 
 merged_data = pd.read_excel(file_path, sheet_names[0]) #Imported and exported Energy
 next_data = pd.read_excel(file_path, sheet_names[1]) #Predicted energy
