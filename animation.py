@@ -238,7 +238,7 @@ class Root:
         points = self.generated
         result = []
         last = points[0]
-        for (x, y, w) in points[1:count * 4]:
+        for (x, y, w) in points[1:count]:
             result = result + ax.plot([last[0], x], [last[1], y], color='brown', linewidth=w)
             last = (x, y, w)
         return result
@@ -264,7 +264,7 @@ class RootAndTreeAnimation:
 
     def update_animation(self, frame):
         result = self.tree.update_animation(frame)
-        frames = self.tree.updater.depth * self.tree.updater.frames_per_update 
+        frames = self.tree.updater.depth * self.tree.updater.frames_per_update * 16
         count = frame
         if (frame < frames / 512):
             count = int(frame / 512)
