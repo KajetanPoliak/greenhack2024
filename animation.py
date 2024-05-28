@@ -266,6 +266,22 @@ class RootAndTreeAnimation:
         result = self.tree.update_animation(frame)
         frames = self.tree.updater.depth * self.tree.updater.frames_per_update 
         count = frame
+        if (frame < frames / 512):
+            count = int(frame / 512)
+        if (frame < frames / 256):
+            count = int(frame / 256)
+        if (frame < frames / 128):
+            count = int(frame / 128)
+        if (frame < frames / 64):
+            count = int(frame / 64)
+        if (frame < frames / 32):
+            count = int(frame / 32)
+        if (frame < frames / 16):
+            count = int(frame / 16)
+        if (frame < frames / 8):
+            count = int(frame / 8)
+        if (frame < frames / 4):
+            count = int(frame / 4)
         if (frame < frames / 2):
             count = int(frame / 2)
         for root in self.roots:
